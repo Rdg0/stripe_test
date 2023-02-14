@@ -46,10 +46,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'shop.urls'
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +123,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe
 
-stripe_public_key = os.getenv('STRIPE_PUBLIC_KEY')
-stripe_private_key = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
+STRIPE_PRIVATE_KEY = os.getenv('STRIPE_SECRET_KEY')
+DOMAIN = os.getenv('DOMAIN')
 
+# По ТЗ без слеша
+APPEND_SLASH = False

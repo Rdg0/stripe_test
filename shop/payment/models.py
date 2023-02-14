@@ -7,4 +7,18 @@ class Item(models.Model):
     description = models.TextField()
     price = models.IntegerField()
 
+    def get_dollar_price(self):
+        """Получаем стоимость в долларах."""
+        return f'{self.price / 100:.2f}'
+
+    def __str__(self):
+        return self.name
+
+
+class Order(models.Model):
+    pass
+
+
+class Discount(models.Model):
+    pass
 
