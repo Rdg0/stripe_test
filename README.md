@@ -19,12 +19,12 @@ DOMAIN - адрес вашего домена
 Запуск проекта производится из директории stripe_test командой:  
 docker-compose up -d --build  
 
-Затем необходимо произвести подготовку данных проекта, выполнив следующие команды:
-docker-compose exec web python manage.py migrate
-docker-compose exec web python manage.py collectstatic --no-input
-docker-compose exec web python manage.py createsuperuser
+Затем необходимо произвести подготовку данных проекта, выполнив следующие команды:  
+docker-compose exec web python manage.py migrate  
+docker-compose exec web python manage.py collectstatic --no-input  
+docker-compose exec web python manage.py createsuperuser  
 
-Далее через панель администратора добавить необходимые товары.
+Далее через панель администратора добавить необходимые товары.  
 
 
 Опубликован тут:  
