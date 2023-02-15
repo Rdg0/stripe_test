@@ -17,9 +17,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8fc^by%_3#p)^2j))^m2!46yk+v=_1oqa&=el4n6xbvudx!7zw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['194.87.210.36', 'localhost', '127.0.0.1', 'web']
 
 
 # Application definition
@@ -114,6 +114,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -127,5 +128,5 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
 STRIPE_PRIVATE_KEY = os.getenv('STRIPE_SECRET_KEY')
 DOMAIN = os.getenv('DOMAIN')
 
-# По ТЗ без слеша
-APPEND_SLASH = False
+# По ТЗ URI без слеша
+# APPEND_SLASH = False

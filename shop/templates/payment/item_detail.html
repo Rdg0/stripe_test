@@ -13,10 +13,10 @@
         <div class="description">
           <h3>{{ item.description }}</h3>
           <h5>Price - {{ item.get_dollar_price }}$</h5>
-          
         </div>
       </div>
-      <form action="/create-checkout-session" method="POST">
+      <form action="{% url 'buy' item.id %}" method="POST">
+        {% csrf_token %}
         <button type="submit" id="checkout-button">Checkout</button>
       </form>
     </section>

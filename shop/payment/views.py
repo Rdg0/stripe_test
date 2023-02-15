@@ -41,11 +41,12 @@ def create_checkout_session(request, pk):
                 'quantity': 1
             },],
             mode='payment',
-            success_url=DOMAIN + '/success.html',
-            cancel_url=DOMAIN + '/cancel.html',
+            success_url=DOMAIN + 'success',
+            cancel_url=DOMAIN + 'cancel',
         )
     except Exception as e:
-        return str(e) 
+        return str(e)
+    # Если необходимо вернуть Json c session id: 
     # return JsonResponse(
     #     {'id': checkout_session.id}
     # )
@@ -53,10 +54,10 @@ def create_checkout_session(request, pk):
 
 
 def success(request):
-    template = 'success.html'
+    template = 'payment/success.html'
     return render(request, template)
 
 
 def cancel(request):
-    template = 'cancel.html'
+    template = 'payment/cancel.html'
     return render(request, template)
