@@ -28,7 +28,7 @@ docker-compose exec web python manage.py createsuperuser
 
 
 Опубликован тут:  
-http://194.87.210.36/
+http://176.57.221.51/
 
 
 
