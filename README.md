@@ -3,7 +3,7 @@
 Создаем платежные формы с помощью Django и Stripe.  
 
 Стек:  
-Django 3.2
+Django 3.2  
 stripe 5.0
 
 
